@@ -9,7 +9,7 @@ import { SeriesPage } from "./pages/SeriesPage";
 import { SinglePage } from "./pages/SinglePage";
 const App = () =>{
     return(
-        <div>
+        <div className="bg-black text-white">
             <Routes> 
                 <Route path="/" element={<HomePage/>}/>
                 
