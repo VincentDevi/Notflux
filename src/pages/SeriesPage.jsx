@@ -11,6 +11,8 @@ export const SeriesPage = () =>{
         <div>
             <SiteName/>
             <Header/>
+            <h3>Series page</h3>
+
         </div>
     );
 }

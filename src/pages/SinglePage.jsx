@@ -7,7 +7,7 @@ export const SinglePage = () =>{
     // si possible des films similaires
     return (
         <div>
-            
+            <h3>single page</h3>
         </div>
     );
 }

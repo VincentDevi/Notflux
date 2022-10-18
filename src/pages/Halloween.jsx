@@ -7,6 +7,8 @@ export const Halloween = () =>{
         <div>
             <SiteName/>
             <Header/>
+            <h3>Halloween</h3>
+
         </div>
     );
 };

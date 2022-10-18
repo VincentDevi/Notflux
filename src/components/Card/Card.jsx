@@ -1,13 +1,16 @@
 import React from "react";
 
-export const Card = () =>{
+// eslint-disable-next-line react/prop-types
+export const Card = ({children}) =>{
     return (
         <div>
             <div>
                 <img src="#" alt="Affiche"/>
             </div>
-            <h2>Titre</h2>
-            <p>description</p>
+            <div>
+                <h4>{children[0]}</h4>
+            </div>
+            <p> {children[1]}</p>
         </div>
     );
 }
