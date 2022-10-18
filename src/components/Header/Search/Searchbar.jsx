@@ -5,9 +5,9 @@ export const Searchbar = () =>{
         // search for a movie or a tv serie
     }
     return (
-        <div>
-            <input type="text" />
-            <button onClick={search}>Search</button>
+        <div className="flex justify-center">
+            <input type="text" className="border-2 border-gray-300 bg-white h-7 w-64 px-5 pr-16 rounded-lg text-sm focus:outline-none" />
+            <button onClick={search} className="font-netflix">Search</button>
         </div>
     );
 }
