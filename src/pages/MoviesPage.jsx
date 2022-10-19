@@ -10,7 +10,7 @@ export const MoviesPage = () =>{
             <SiteName/>
             <Header/>
             <h3>Movies page</h3>
-
+            <p>en construction</p>
         </div>
     );
 }

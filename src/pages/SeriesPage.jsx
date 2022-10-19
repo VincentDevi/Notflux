@@ -12,6 +12,7 @@ export const SeriesPage = () =>{
             <SiteName/>
             <Header/>
             <h3>Series page</h3>
+            <p>en construction</p>
 
         </div>
     );

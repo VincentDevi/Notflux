@@ -29,13 +29,13 @@ export const Carousel = ({children}) =>{
         description : "synopsis"},
     ];
     return (
-        <div>
-            <h2 className="text-red text-xtra">{children}</h2>
-            <div>
+        <div className="flex-col">
+            <h2 className="text-red text-xtra mb-5">{children}</h2>
+            <div className=" overflow-scroll flex w-full" >
                 {trendingArray.map((item,index) => 
-                    <div key={index}>
-                    <h3 className="text-large">{item.title}</h3>
-                    <p>{item.description}</p>
+                    <div key={index} className="shrink-0 mx-8 mb-5 h-48 w-1/3 border-solid border-white border-2">
+                        <h3 className="text-large">{item.title}</h3>
+                        <p>{item.description}</p>
                     </div>)}
             </div>
         </div>
