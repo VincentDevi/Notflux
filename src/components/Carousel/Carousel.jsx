@@ -1,5 +1,4 @@
-import { list } from "postcss";
-import React, { Children } from "react";
+import React from "react";
 
 // eslint-disable-next-line react/prop-types
 export const Carousel = ({children}) =>{
