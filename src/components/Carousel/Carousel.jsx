@@ -1,24 +1,25 @@
 import React from "react";
+import { fecthTrending } from "../../hooks/fetchPopularMovie";
 
 // eslint-disable-next-line react/prop-types
 export const Carousel = ({children}) =>{
-
     let test= null;
-    if (children[1][0]!= null){
+    if (children[1][0]){
+        console.log(children[1][0])
+        // eslint-disable-next-line react/prop-types
         const list = children[1][0].results;
         test = serieOrMovie(list);
     }
-
     return (
         <div className="flex-col h-auto">
             <h2 className="text-red text-xtra mb-5 mx-8">{children[0]}</h2>
-            {(test== null)? console.log("loading") : test}        
+            {(test)? test : <p>loading</p>}        
         </div>
     );
 }
 
 const getSrcImage = (path) =>{
-    return "http://image.tmdb.org/t/p/w500"+path
+    return "https://image.tmdb.org/t/p/w500"+path
     }   
 
 const serieOrMovie = (list) =>{
@@ -33,3 +34,4 @@ const serieOrMovie = (list) =>{
             </div>
     );
 }
+

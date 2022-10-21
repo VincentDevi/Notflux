@@ -2,6 +2,6 @@ import React from "react";
 
 export const SiteName = () =>{
     return (
-        <h1 className="font-netflix text-enormous text-red text-center">Netflux</h1>
+        <h1 className="font-netflix text-enormous text-red text-center">Notflux</h1>
     );
 }

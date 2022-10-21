@@ -11,7 +11,6 @@ export const HomePage = () =>{
     const movieTrending = fecthTrending("https://api.themoviedb.org/3/trending/movie/day?api_key=1f23cb937d155a995019ffd894a97ddd");
     const tvTrending = fecthTrending("https://api.themoviedb.org/3/trending/tv/day?api_key=1f23cb937d155a995019ffd894a97ddd");
     const horrorTrending = fecthTrending("https://api.themoviedb.org/3/discover/movie?api_key=1f23cb937d155a995019ffd894a97ddd&with_genres=27");
-   
 // poster path :
   //  http://image.tmdb.org/t/p/w500/tSxbUnrnWlR5dQvUgqMI7sACmFD.jpg
     return (
