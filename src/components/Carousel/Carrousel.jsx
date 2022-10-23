@@ -1,19 +1,13 @@
 import React from "react";
-import { fecthTrending } from "../../hooks/fetchPopularMovie";
+import { useFetch } from "../../hooks/useFetch";
 
 // eslint-disable-next-line react/prop-types
-export const Carousel = ({children}) =>{
-    let test= null;
-    if (children[1][0]){
-        console.log(children[1][0])
-        // eslint-disable-next-line react/prop-types
-        const list = children[1][0].results;
-        test = serieOrMovie(list);
-    }
+export const Carrousel = ({children}) =>{
+    
+     const [data,loading,error] = useFetch(children[1])
     return (
         <div className="flex-col h-auto">
-            <h2 className="text-red text-xtra mb-5 mx-8">{children[0]}</h2>
-            {(test)? test : <p>loading</p>}        
+            { ( data ) ? <MoviePoster>{data.results}</MoviePoster> : <LoadingCar/> }       
         </div>
     );
 }
@@ -22,16 +16,24 @@ const getSrcImage = (path) =>{
     return "https://image.tmdb.org/t/p/w500"+path
     }   
 
-const serieOrMovie = (list) =>{
+// eslint-disable-next-line react/prop-types
+const MoviePoster = ({children}) =>{
         return(
         <div className=" h-auto overflow-scroll flex w-full" >
-                {list.map((item,index) => 
+                {children.map((item,index) => 
                     <div key={index} className="shrink-0 mx-2 mb-8 h-auto w-40">
                         <div className="h-56">
                         <img src={getSrcImage(item.poster_path)} alt="poster" className="object-contain h-full"/> 
                         </div>
                     </div>)}
             </div>
+    );
+}
+const LoadingCar = () =>{
+    return (
+        <div>
+            <p>loading</p>
+        </div>
     );
 }
 
