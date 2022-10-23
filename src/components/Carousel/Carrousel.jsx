@@ -1,11 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { useFetch } from "../../hooks/useFetch";
 
 // eslint-disable-next-line react/prop-types
 export const Carrousel = ({children}) =>{
     
-     const [data,loading,error] = useFetch(children[1])
-    return (
+     const [data, loading, error] = useFetch(children);
+     if (data){
+     console.log(data);
+     }
+     return (
         <div className="flex-col h-auto">
             { ( data ) ? <MoviePoster>{data.results}</MoviePoster> : <LoadingCar/> }       
         </div>
@@ -13,10 +17,10 @@ export const Carrousel = ({children}) =>{
 }
 
 const getSrcImage = (path) =>{
+    // poster path : http://image.tmdb.org/t/p/w500/
     return "https://image.tmdb.org/t/p/w500"+path
     }   
 
-// eslint-disable-next-line react/prop-types
 const MoviePoster = ({children}) =>{
         return(
         <div className=" h-auto overflow-scroll flex w-full" >
