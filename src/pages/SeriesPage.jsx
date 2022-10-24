@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import { Carrousel } from "../components/Carousel/Carrousel";
 import { Header } from "../components/Header/Header";
@@ -23,7 +24,7 @@ const GenresCarrousel = ({children}) =>{
         <div>
         {children.map((item,index) =>
             <div key={index}>
-                <h2 className="text-red text-xtra mb-5 mx-8">{item.name}</h2>
+                <h2 className="text-white text-xtra mb-5 mx-8">{item.name}</h2>
                 <Carrousel>{getUrlByGenre("tv",item.id)}</Carrousel>
             </div>
 

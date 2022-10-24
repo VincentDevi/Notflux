@@ -13,13 +13,13 @@ export const HomePage = () =>{
             <SiteName/>
             <Header/>
             
-            <h2 className="text-red text-xtra mb-5 mx-8">Halloween</h2>
+            <h2 className="text-white text-xtra mb-5 mx-8">Halloween</h2>
             <Carrousel>{horrorUrl}</Carrousel>
             
-            <h2 className="text-red text-xtra mb-5 mx-8">Trending Movies</h2>
+            <h2 className="text-white text-xtra mb-5 mx-8">Trending Movies</h2>
             <Carrousel>{movieTrendingUrl}</Carrousel>
 
-            <h2 className="text-red text-xtra mb-5 mx-8">Trending Tv Series</h2>
+            <h2 className="text-white text-xtra mb-5 mx-8">Trending Tv Series</h2>
             <Carrousel>{tvTrendingUrl}</Carrousel>
         
         </div>
