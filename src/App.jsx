@@ -5,7 +5,7 @@ import { Halloween } from "./pages/Halloween";
 import { HomePage } from "./pages/HomePage";
 import { MoviesPage } from "./pages/MoviesPage";
 import { NoMatch } from "./pages/NoMatch";
-import { SeriesPage } from "./pages/SeriesPage";
+import {SeriesPage} from "./pages/SeriesPage";
 import { SinglePage } from "./pages/SinglePage";
 const App = () =>{
     return(
