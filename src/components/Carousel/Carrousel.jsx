@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { getPosterUrl } from "../../util/getPosterUrl";
 
 // eslint-disable-next-line react/prop-types
 export const Carrousel = ({type,children}) =>{
+
     
      const [data, loading, error] = useFetch(children);
      return (
@@ -18,9 +19,9 @@ export const Carrousel = ({type,children}) =>{
 
 const MoviePoster = ({type,children}) =>{
         return(
-        <div className=" h-auto overflow-scroll flex w-full" >
+        <div className="pl-5 h-auto overflow-scroll flex w-full" >
                 {children.map((item,index) => 
-                    <div key={index} className="shrink-0 mx-2 mb-8 h-auto w-40">
+                    <div key={index} className="shrink-0 mx-0.5 mb-8 h-auto w-40">
                         <div className="h-56"> <Link to={"/description/"+type+"/"+item.id}>
                         <img src={getPosterUrl(item.poster_path)} alt="poster" className="object-contain h-full"/> 
                         </Link>

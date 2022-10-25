@@ -2,6 +2,7 @@
 import React from "react";
 import { Carrousel } from "../components/Carousel/Carrousel";
 import { Header } from "../components/Header/Header";
+import { SimilarMovies } from "../components/Similar/SimilarMovies";
 import { SiteName } from "../components/SiteName/SiteName";
 import { useFetch } from "../hooks/useFetch";
 import { getUrlByGenre } from "../util/getListOfGenre";
@@ -11,17 +12,16 @@ export const MoviesPage = () =>{
     
     return (
         <div>
-            <SiteName/>
             <Header/>
             { ( allGenres[0] ) ? <GenresCarrousel>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
-
+            
         </div>
     );
 }
 
 const GenresCarrousel = ({children}) =>{
     return (
-        <div>
+        <div className="mt-10">
         {children.map((item,index) =>
             <div key={index}>
                 <h2 className="text-white text-xtra mb-5 mx-8">{item.name}</h2>

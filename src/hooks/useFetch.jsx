@@ -13,7 +13,7 @@ export const useFetch = (url) =>{
         const fecthData = async () =>{
             try{
                 const response = await axios.get(url);
-                const result = await response?.data
+                const result = await response?.data;
                 setData(result);
                 setLoading(false);
             }catch(e){
@@ -24,8 +24,6 @@ export const useFetch = (url) =>{
 
        fecthData();
 
-    },[] );
+    },[url] );
     return [data,loading,error]; 
 }
-
-

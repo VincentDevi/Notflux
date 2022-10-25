@@ -11,7 +11,6 @@ export const SeriesPage = () =>{
     
     return (
         <div>
-            <SiteName/>
             <Header/>
             { ( allGenres[0] ) ? <GenresCarrousel>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
 
@@ -21,7 +20,7 @@ export const SeriesPage = () =>{
 
 const GenresCarrousel = ({children}) =>{
     return (
-        <div>
+        <div className="mt-10">
         {children.map((item,index) =>
             <div key={index}>
                 <h2 className="text-white text-xtra mb-5 mx-8">{item.name}</h2>

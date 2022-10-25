@@ -10,11 +10,9 @@ export const HomePage = () =>{
 
     return (
         <div>
-            <SiteName/>
             <Header/>
-            <h2 className="text-white text-xtra mb-5 mx-8">Trending</h2>
 
-            <h2 className="text-white text-xtra mb-5 mx-8">Halloween</h2>
+            <h2 className="text-white text-xtra mb-5 mx-8 font-halloween mt-10">Halloween</h2>
             <Carrousel type={"movie"}>{horrorUrl}</Carrousel>
             
             <h2 className="text-white text-xtra mb-5 mx-8">Movies</h2>

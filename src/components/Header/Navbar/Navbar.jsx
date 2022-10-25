@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () =>{
     return (
-        <nav className="text-large font-netflix text-bordeaux">
+        <nav className="text-large font-netflix text-white">
             <ul className="flex justify-around">
                 <Link to="/">Home</Link>
                 <Link to= "/series">Tv Series</Link>
