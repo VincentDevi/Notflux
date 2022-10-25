@@ -25,7 +25,7 @@ const GenresCarrousel = ({children}) =>{
         {children.map((item,index) =>
             <div key={index}>
                 <h2 className="text-white text-xtra mb-5 mx-8">{item.name}</h2>
-                <Carrousel>{getUrlByGenre("movie",item.id)}</Carrousel>
+                <Carrousel type={"movie"}>{getUrlByGenre("movie",item.id)}</Carrousel>
             </div>
 
         )}

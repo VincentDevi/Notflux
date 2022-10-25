@@ -24,7 +24,7 @@ export const useFetch = (url) =>{
 
        fecthData();
 
-    },[url] );
+    },[] );
     return [data,loading,error]; 
 }
 

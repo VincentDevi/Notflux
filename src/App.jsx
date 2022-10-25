@@ -19,7 +19,7 @@ const App = () =>{
                 
                 <Route path="/halloween" element={<Halloween/>}/>
 
-                <Route path="/description" element={<SinglePage/>}/>
+                <Route path="/description/:type/:id" element={<SinglePage/>}/>
 
                 <Route path="/*" element={<NoMatch />} />
             </Routes>
