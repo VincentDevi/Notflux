@@ -13,12 +13,13 @@ module.exports = {
 
       colors:{
         'red' : "#db0000",
-        'black' : "#000000",
+        'black' : "#141414",
         'grey' : "#564d4d",
         'bordeaux' : "#831010",
         'white' : '#FFFFFF'
       },
       fontSize:{
+        'gigantous' : '5rem',
         'enormous' : '3rem',
         'xtra' : "2rem",
         'large' : "1.75rem",

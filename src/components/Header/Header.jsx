@@ -5,9 +5,12 @@ import { Searchbar } from "./Search/Searchbar";
 
 export const Header = () =>{
     return (
-        <div className="mb-5 sm:mb-20">
+        <div className="mb-5 sm:mb-20 w-full">
             <SiteName/>
-            <Navbar/>
+            <div className="flex flex-wrap w-full sm:justify-evenly">
+                <Navbar/>
+                <Searchbar/>
+            </div>
         </div>
     );
 }

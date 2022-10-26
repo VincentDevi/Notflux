@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { getDuration } from "../../../util/getDuration";
 export const TvInformation = ({children}) =>{
     return (
         <div className="sm:w-full sm:h-96 sm:order-3 sm:flex">
