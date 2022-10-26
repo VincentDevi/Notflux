@@ -21,9 +21,9 @@ const MoviePoster = ({type,children}) =>{
         return(
         <div className="pl-5 h-auto overflow-scroll flex w-full" >
                 {children.map((item,index) => 
-                    <div key={index} className="shrink-0 mx-0.5 mb-8 h-auto w-40">
-                        <div className="h-56"> <Link to={"/description/"+type+"/"+item.id}>
-                        <img src={getPosterUrl(item.poster_path)} alt="poster" className="object-contain h-full"/> 
+                    <div key={index} className="shrink-0 mx-0.5 mb-8 h-auto w-40 sm:w-auto">
+                        <div className="h-56  w-80 sm:w-auto sm:h-96"> <Link to={"/description/"+type+"/"+item.id}>
+                        <img src={getPosterUrl(item.poster_path)} alt="poster" className="w-auto h-full"/> 
                         </Link>
                         </div>
                     </div>)}

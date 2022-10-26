@@ -5,7 +5,7 @@ import { Searchbar } from "./Search/Searchbar";
 
 export const Header = () =>{
     return (
-        <div>
+        <div className="mb-5 sm:mb-20">
             <SiteName/>
             <Navbar/>
         </div>
