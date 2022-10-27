@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useFetch } from "../../hooks/useFetch";
+import { Link } from "react-router-dom";
 
-const InputSelectGenre = ({listGenre}) =>{
+const InputSelectGenre = ({listGenre,type}) =>{
     return (
         <select name="genre" id="genre">
             { listGenre && listGenre.map( (item,index) =>
-            <option key={index} value={item}>{item}</option>
+            <option key={index} value={item}><Link to={"/bygenre/"+type+"/"+item.name+"/"+item.id}>{item}</Link></option>
                 )}
         </select>        
     );

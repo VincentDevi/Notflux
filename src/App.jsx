@@ -7,6 +7,7 @@ import { MoviesPage } from "./pages/MoviesPage";
 import { NoMatch } from "./pages/NoMatch";
 import { SinglePage } from "./pages/SinglePage";
 import { NameSearch } from "./pages/NameSearch";
+import { ByGenre } from "./pages/ByGenre";
 const App = () =>{
     return(
         <div>
@@ -20,6 +21,8 @@ const App = () =>{
                 <Route path="/description/:type/:id" element={<SinglePage/>}/>
 
                 <Route path="/search/:query" element={<NameSearch/>} />
+                
+                <Route path="/bygenre/:type/:genre/:id" element={<ByGenre/>} />
 
                 <Route path="*" element={<NoMatch />} />
 

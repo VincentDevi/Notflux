@@ -9,7 +9,7 @@ export const Searchbar = () =>{
     const onChangeHandler = () =>{
         query = searchRef.current.value;
         const page = "1";
-        setUrl("https://api.themoviedb.org/3/search/multi?api_key=1f23cb937d155a995019ffd894a97ddd&language=en-US&page="+page+"&query="+query);
+        setUrl("https://api.themoviedb.org/3/search/multi?api_key=1f23cb937d155a995019ffd894a97ddd&page="+page+"&query="+query);
     }
     const clickHandler = () =>{
         searchRef.current.value="";

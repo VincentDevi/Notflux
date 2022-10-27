@@ -14,7 +14,7 @@ export const MoviesPage = () =>{
     return (
         <div>
             <Header/>
-            
+            <InputSelectGenre listGenre={allGenres} type={type}/>
             { ( allGenres[0] ) ? <GenresCarrousel type={type}>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
             
         </div>
