@@ -1,31 +1,33 @@
 /* eslint-disable react/prop-types */
 import React from "react";
+import { useParams } from "react-router-dom";
 import { Carrousel } from "../components/Carousel/Carrousel";
 import { Header } from "../components/Header/Header";
-import { SimilarMovies } from "../components/Similar/SimilarMovies";
-import { SiteName } from "../components/SiteName/SiteName";
 import { useFetch } from "../hooks/useFetch";
 import { getUrlByGenre } from "../util/getListOfGenre";
 
+
 export const MoviesPage = () =>{
-    const allGenres = useFetch("https://api.themoviedb.org/3/genre/movie/list?api_key=1f23cb937d155a995019ffd894a97ddd");
+    const {type} =useParams();
+    const allGenres = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     
     return (
         <div>
             <Header/>
-            { ( allGenres[0] ) ? <GenresCarrousel>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
+            
+            { ( allGenres[0] ) ? <GenresCarrousel type={type}>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
             
         </div>
     );
 }
 
-const GenresCarrousel = ({children}) =>{
+const GenresCarrousel = ({type,children}) =>{
     return (
         <div className="mt-10">
         {children.map((item,index) =>
             <div key={index}>
                 <h2 className="text-white text-xtra sm:text-enormous mb-5 mx-8 sm:mx-24">{item.name}</h2>
-                <Carrousel type={"movie"}>{getUrlByGenre("movie",item.id)}</Carrousel>
+                <Carrousel type={type}>{getUrlByGenre(type,item.id)}</Carrousel>
             </div>
 
         )}

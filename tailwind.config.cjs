@@ -16,7 +16,8 @@ module.exports = {
         'black' : "#141414",
         'grey' : "#564d4d",
         'bordeaux' : "#831010",
-        'white' : '#FFFFFF'
+        'white' : '#FFFFFF',
+        'test' : '#3C4048'
       },
       fontSize:{
         'gigantous' : '5rem',
