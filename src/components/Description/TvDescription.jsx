@@ -14,7 +14,7 @@ export const TvDescription = ({children}) =>{
             
             <ul className="flex justify-around flex-wrap sm:flex-col sm:h-full sm::w-auto sm:ml-10 sm:justify-end">
                 {children.genres.map((item,index) =>
-                <li key={index} className="mx-1.5 mt-3 shrink-0 w-24 text-center border-solid border-1 rounded bg-grey text-medium sm:mb-7">{(item.name=="Science Fiction")? "Sci-fi":item.name}</li>
+                <li key={index} className="text-large mx-1.5 mt-3 shrink-0 w-auto self-start px-2 text-center border-solid border-1 rounded bg-grey sm:mb-7">{(item.name=="Science Fiction")? "Sci-fi":item.name}</li>
                 )}
             </ul>
             </div>
