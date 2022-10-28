@@ -7,13 +7,16 @@ export const SearchList = ({onClick,url}) =>{
     const [ resultList, setResultList ] =useState([]);
     const [data, loading , error] = useFetch(url);
     let arr;
-    if ( data && data.results.length != 0 ){
+    if ( data ){
+        if( data.results.length !=0){
        arr = data.results.filter(item => item.media_type != "person");
+       console.log(data.results)
+        }
     }
 
     return (
         <div>
-           { ( arr) ? <ListeS onClick={onClick} data={arr}/> : <span></span> }
+           { ( data) ? <ListeS onClick={onClick} data={arr}/> : <span></span> }
         </div>
     );
 }
