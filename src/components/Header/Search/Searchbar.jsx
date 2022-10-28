@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { SearchList } from "./SearchList";
 
 export const Searchbar = () =>{
     const searchRef = useRef("");
     const [ url, setUrl ] = useState("");
     let query= "";
+    let navigate = useNavigate();
 
     const onChangeHandler = () =>{
         query = searchRef.current.value;
@@ -16,8 +18,7 @@ export const Searchbar = () =>{
     }
     const keyPressHandler = (event) =>{
         if (event.key==="Enter"){
-            console.log('test');
-            location.replace("/search/"+searchRef.current.value);
+            navigate("/search/"+searchRef.current.value)
         }
     }
     return (
