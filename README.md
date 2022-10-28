@@ -30,7 +30,7 @@
 ## **What can you do on this site ?**
 
 + See what tv series and movies are in the trending ( daily update )  
-+ Search for a specific title in the search
++ Search for a specific title
 + Search a movie or a serie with a specific genre
 + You can find some information about the movie that clicked on and see a trailer of it
 + You can also find similar movies of the one you clicked on
