@@ -7,7 +7,7 @@ export const SearchList = ({onClick,url}) =>{
     const [ resultList, setResultList ] =useState([]);
     const [data, loading , error] = useFetch(url);
     let arr;
-    if ( data ){
+    if ( data && data.results.length != 0 ){
        arr = data.results.filter(item => item.media_type != "person");
     }
 
