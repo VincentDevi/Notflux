@@ -7,7 +7,7 @@ export const TvInformation = ({children}) =>{
                    
             <div className="self-center">
                 <h4 className="text-medium px-5">Number of season: <span className="text-large">{children.number_of_seasons}</span></h4>
-                <h4 className="text-medium px-5">Number of episodes: <span className="text-large">{children.number_of_episodes}</span></h4>
+                <h4 className="text-medium px-5">Number of episode: <span className="text-large">{children.number_of_episodes}</span></h4>
                 <p className="text-medium px-5">Note: <span className="text-large">{Math.round(children.vote_average)}</span> /10</p>
                 
             </div>
