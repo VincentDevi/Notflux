@@ -35,7 +35,7 @@
 + You can find some information about the movie that clicked on and see a trailer of it
 + You can also find similar movies of the one you clicked on
 
-## **Here are some screenshot to give you an Idea of what it looks like**
+## **Here are some screenshots to give you an Idea of what it looks like**
 
 
 ![HomePage](public/homePage.png) 
