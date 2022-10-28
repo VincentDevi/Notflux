@@ -44,5 +44,5 @@
 ![ListPage](public/list-mobile.png)
 
 
-[**If you want to check it here is the Link**](https://relaxed-truffle-a48eee.netlify.app/) : 
+[**If you want to check it, here is the Link**](https://relaxed-truffle-a48eee.netlify.app/) : 
 * https://relaxed-truffle-a48eee.netlify.app/
