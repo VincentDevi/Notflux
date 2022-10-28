@@ -19,6 +19,8 @@ export const Searchbar = () =>{
     const keyPressHandler = (event) =>{
         if (event.key==="Enter"){
             navigate("/search/"+searchRef.current.value)
+            searchRef.current.value="";
+
         }
     }
     return (
