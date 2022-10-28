@@ -1,6 +1,6 @@
 # **NOTFLUX**
 ## Link to the actual site
-[Notflux](https://relaxed-truffle-a48eee.netlify.app/) 
+[Notflux](https://notflux.netlify.app/) 
 
 ## **Which is kind of a *Netflix* but not really**
 
@@ -44,5 +44,5 @@
 ![ListPage](public/list-mobile.png)
 
 
-[**If you want to check it, here is the Link**](https://relaxed-truffle-a48eee.netlify.app/) : 
-* https://relaxed-truffle-a48eee.netlify.app/
+[**If you want to check it, here is the Link**](https://notflux.netlify.app/) : 
+* https://notflux.netlify.app/
