@@ -19,14 +19,17 @@ export const SinglePage = () =>{
                
     return (
         <div>
-            <div className="sm:h-screen sm:mx-24">
+            <div className="sm:h-screen">
             <Header/>
+            <div className="sm:mx-24">
+
             <div className="sm:flex sm:shrink-0 sm:w-full sm:flex-wrap sm:justify-center">
             { ( !data[0] ) ? <p>loading</p> : (type==="movie") ? <MovieDescription>{data[0]}</MovieDescription> : <TvDescription>{data[0]}</TvDescription>}
             
             { ( !data[0] ) ? <p>loading</p> : (type==="movie") ? <MovieInformation>{data[0]}</MovieInformation> : <TvInformation>{data[0]}</TvInformation>}
             <TrailerVideo type={type} movieId={id}/>
 
+            </div>
             </div>
             </div>
             <SimilarMovies type={type} movieId={id} />

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Carrousel } from "../components/Carousel/Carrousel";
 import { Header } from "../components/Header/Header";
 import { InputSelectGenre } from "../components/InputSelect/InputSelectGenre";
@@ -27,7 +27,7 @@ const GenresCarrousel = ({type,children}) =>{
         <div className="mt-10">
         {children.map((item,index) =>
             <div key={index}>
-                <h2 className="text-white text-xtra sm:text-enormous mb-5 mx-8 sm:mx-24">{item.name}</h2>
+               <Link to={"/bygenre/"+type+"/"+item.name+"/"+item.id} ><h2 className="text-white text-xtra sm:text-enormous mb-5 mx-8 sm:mx-24">{item.name}</h2></Link>
                 <Carrousel type={type}>{getUrlByGenre(type,item.id)}</Carrousel>
             </div>
 

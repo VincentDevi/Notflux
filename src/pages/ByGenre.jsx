@@ -18,7 +18,7 @@ export const ByGenre = () =>{
         <div>
             <Header/>
             { ( genreList && genreList.length != 0) ? <InputSelectGenre type={type}>{genreList.genres}</InputSelectGenre>: <p></p> }
-            <h4 className="text-large">Search for: <span className="text-xtra"> " {genre} " </span></h4>
+            <h4 className="mx-5 text-medium sm:text-large sm:pl-36 sm:mb-10">Search for: <span className="text-large sm:text-enormous"> " {genre} " </span></h4>
 
             { ( data ) ? <SearchByGenre data={data.results} type={type}/> : <p>loading</p>
 }
