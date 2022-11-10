@@ -41,7 +41,6 @@
 ![HomePage](public/homePage.png) 
 ![SinglePage](public/singlePage.png)
 ![HomeMobile](public/homePage-mobile.png) 
-![ListPage](public/list-mobile.png)
 
 
 [**If you want to check it, here is the Link**](https://notflux.netlify.app/) : 
