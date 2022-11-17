@@ -12,10 +12,6 @@ export const HomePage = () =>{
     return (
         <div>
             <Header/>
-
-            <Link to="/bygenre/movie/horror/27"><h2 className="text-white text-enormous mb-5 mx-8 font-halloween mt-10 sm:mx-24">Halloween</h2></Link>
-            <Carrousel type={"movie"}>{horrorUrl}</Carrousel>
-            
             <Link to="/list/movie" ><h2 className="text-white text-enormous mb-5 mx-8 sm:mx-24">Movies</h2></Link>
             <Carrousel type={"movie"}>{movieTrendingUrl}</Carrousel>
 
