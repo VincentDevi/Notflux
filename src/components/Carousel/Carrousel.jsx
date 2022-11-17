@@ -3,7 +3,13 @@ import React from "react";
 import { Link, useRouteLoaderData } from "react-router-dom";
 import { useFetch } from "../../hooks/useFetch";
 import { getPosterUrl } from "../../util/getPosterUrl";
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 // eslint-disable-next-line react/prop-types
 export const Carrousel = ({type,children}) =>{
 
@@ -11,11 +17,11 @@ export const Carrousel = ({type,children}) =>{
      const [data, loading, error] = useFetch(children);
      return (
         <div className="flex-col h-auto">
-            { ( data ) ? <MoviePoster type={type}>{data.results}</MoviePoster> : <LoadingCar/> }       
+            { ( data ) ? <MoviePoster type={type}>{data.results}</MoviePoster>
+ : <LoadingCar/> }       
         </div>
     );
 }
-
 
 const MoviePoster = ({type,children}) =>{
         return(

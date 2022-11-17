@@ -1,6 +1,6 @@
 import React from "react";
-import "./assets/index.css";
 import { Routes,Route } from "react-router-dom";
+import './index.css';
 import { Halloween } from "./pages/Halloween";
 import { HomePage } from "./pages/HomePage";
 import { MoviesPage } from "./pages/MoviesPage";
