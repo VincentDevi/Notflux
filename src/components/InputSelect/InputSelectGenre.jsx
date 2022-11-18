@@ -2,14 +2,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export const InputSelectGenre = ({type,children}) =>{
+export const InputSelectGenre = ({type,onClick,children}) =>{
     return (
-            <ul className="w-48 absolute left-6 z-50 flex flex-wrap shrink-0 h-auto" name="genre" id="genre">
+        <div className="order-1 w-9/12 left-2 h-contentMobile absolute z-50">
+            <ul className="w-10/12 bg-test h-full z-50 flex flex-col shrink-0 h-auto" name="genre" id="genre">
                 { children && children.map( (item,index) =>
-                    <Link className="w-1/2" key={index} to={"/bygenre/"+type+"/"+item.name+"/"+item.id}>
+                    <Link className="" onClick={onClick}  key={index} to={"/bygenre/"+type+"/"+item.name+"/"+item.id}>
                         <li className="text-medium text-center bg-test" key={index} value={item.name}>{item.name}</li>
                     </Link>
                     )}
-            </ul>        
+            </ul>   
+        </div>     
         );
 }

@@ -33,7 +33,13 @@ const GenresCarrousel = ({type,children}) =>{
         <div className="mt-1">
         {children.map((item,index) =>
             <div key={index}>
-               <h2 className="text-white text-xtra sm:text-enormous mb-5 mx-8 sm:mx-24"><Link to={"/bygenre/"+type+"/"+item.name+"/"+item.id} >{item.name}</Link></h2>
+                <h2 className="text-white text-xtra sm:text-enormous mb-5 mx-8 sm:mx-24">
+                    <Link className="flex items-center" to={"/bygenre/"+type+"/"+item.name+"/"+item.id} >{item.name}
+                        <div className="ml-2 w-3">
+                            <img className="w-full h-auto" src="../../public/more.png" alt="show more" />
+                        </div>
+                    </Link>
+                </h2>
                 <Carrousel type={type}>{getUrlByGenre(type,item.id)}</Carrousel>
             </div>
 

@@ -17,12 +17,20 @@ export const HomePage = () =>{
             <MobileNav/>
             <div className="w-screen h-auto flex flex-col items-center">
                 <h2 className="w-11/12 mb-2 text-white text-enormous">
-                    <Link to="/list/movie" >Movies </Link>
+                    <Link className="flex items-center" to="/list/movie" >Movies 
+                        <div className="ml-2 w-3">
+                            <img className="w-full h-auto" src="../../public/more.png" alt="show more" />
+                        </div>
+                    </Link>
                 </h2>
                 <Carrousel type={"movie"}>{movieTrendingUrl}</Carrousel>
         
                 <h2 className="w-11/12 mb-2 text-white text-enormous"> 
-                    <Link to="/list/tv">Tv Series</Link> 
+                    <Link className="flex items-center" to="/list/tv">Tv Series
+                        <div className="ml-2 w-3">
+                            <img className="w-full h-auto" src="../../public/more.png" alt="show more" />
+                        </div>
+                    </Link> 
                 </h2>
                 <Carrousel type={"tv"}>{tvTrendingUrl}</Carrousel>
             </div>

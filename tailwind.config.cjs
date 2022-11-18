@@ -12,7 +12,7 @@ module.exports = {
       },
       height:{
         'navMobile': '10vh',
-        'contentMobile': '75vh'
+        'contentMobile': '77vh'
       },
       fontFamily:{
         'halloween' : ['Creepster', 'cursive'],
@@ -32,7 +32,7 @@ module.exports = {
       fontSize:{
         'gigantous' : '3.5rem',
         'enormous' : '1.5rem',
-        'xtra' : "2rem",
+        'xtra' : "1.5rem",
         'large' : "1.75rem",
         'medium' : "1rem",
         'small' : "0.75rem",
