@@ -3,6 +3,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { Header } from "../components/Header/Header";
 import { InputSelectGenre } from "../components/InputSelect/InputSelectGenre";
+import { SelectGenre } from "../components/InputSelect/SelectGenre";
 import { MobileNav } from "../components/MobileNav/MobileNav";
 import { SearchByGenre } from "../components/SearchResult/SearchByGenre";
 import { useFetch } from "../hooks/useFetch";
@@ -17,13 +18,14 @@ export const ByGenre = () =>{
     const [ genreList , genreLoad, genreError ] = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     return (
         <div>
-            <MobileNav/>
-            { ( genreList && genreList.length != 0) ? <InputSelectGenre type={type}>{genreList.genres}</InputSelectGenre>: <p></p> }
-            <h4 className="mx-5 text-medium sm:text-large sm:pl-36 sm:mb-10">Search for: <span className="text-large sm:text-enormous"> " {genre} " </span></h4>
-
-            { ( data ) ? <SearchByGenre data={data.results} type={type}/> : <p>loading</p>
-}
+            <Header/>
             
+            { ( genreList && genreList.length != 0) ? <SelectGenre type={type}>{genreList.genres}</SelectGenre>: null }
+            <h4 className="mx-5 text-medium sm:text-large sm:pl-36 sm:mb-10">Search for: <span className="text-large sm:text-enormous"> " {genre} " </span></h4>
+            <div className="h-contentMobile overflow-y-scroll">
+                { ( data ) ? <SearchByGenre data={data.results} type={type}/> : <p>loading</p>}
+            </div>   
+<MobileNav/>
         </div>
     );
 }

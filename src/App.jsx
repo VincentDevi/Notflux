@@ -9,7 +9,7 @@ import { NameSearch } from "./pages/NameSearch";
 import { ByGenre } from "./pages/ByGenre";
 const App = () =>{
     return(
-        <div className="overflow-x-hidden">
+        <>
             <Routes> 
                 <Route path="/" element={<HomePage/>}/>
                 
@@ -24,7 +24,7 @@ const App = () =>{
                 <Route path="*" element={<NoMatch />} />
 
             </Routes>
-        </div>
+        </>
     );
 }
 export default App
