@@ -1,0 +1,20 @@
+.swiper{
+    align-self: center;
+    width: 80%;
+    position:static;
+}
+.swiper-container{
+    width: 100%;
+    position: relative;
+}
+.swiper-wrapper{
+    margin-bottom: 3rem;
+}
+
+.swiper-button-next { 
+    
+    color: white 
+}
+.swiper-button-prev { 
+    color: white 
+}

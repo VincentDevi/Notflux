@@ -5,18 +5,18 @@ import { useFetch } from "../../hooks/useFetch";
 import { getPosterUrl } from "../../util/getPosterUrl";
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import '../../assets/arrowSwipe.css';
 // eslint-disable-next-line react/prop-types
 export const Carrousel = ({type,children}) =>{
 
     
      const [data, loading, error] = useFetch(children);
      return (
-        <div className="flex-col h-auto">
+        <div className="w-full relative">
             { ( data ) ? <MoviePoster type={type}>{data.results}</MoviePoster>
  : <LoadingCar/> }       
         </div>
@@ -24,17 +24,32 @@ export const Carrousel = ({type,children}) =>{
 }
 
 const MoviePoster = ({type,children}) =>{
-        return(
-        <div className="pl-5 h-auto overflow-scroll flex w-full" >
-                {children.map((item,index) => 
-                    <div key={index} className="shrink-0 mx-0.5 mb-8 h-auto w-40 sm:w-auto">
-                        <div className="h-56  w-80 sm:w-auto sm:h-96 hover:scale-110 duration-700">
+
+    return(
+        <>
+            <Swiper
+                modules={[Navigation, Pagination]}
+                spaceBetween={10}
+                slidesPerGroup={3}
+                slidesPerView={3}
+                loop={true}
+                navigation
+                pagination={{ clickable: true }}
+            >
+            {children&&children.map((item,index) =>{
+                return(
+                    <div key={index}>
+                        <SwiperSlide key={index}>
                             <Link to={"/description/"+type+"/"+item.id}>
-                                <img src={getPosterUrl(item.poster_path)} alt="poster" className="w-auto h-full"/> 
+                                <img className="rounded-lg" src={getPosterUrl(item.poster_path)} alt={(type==="movie")?item.title:"poster"} />
                             </Link>
-                        </div>
-                    </div>)}
-            </div>
+                        </SwiperSlide>
+                    </div>
+                    );
+                })}
+                
+            </Swiper>
+        </>
     );
 }
 const LoadingCar = () =>{
