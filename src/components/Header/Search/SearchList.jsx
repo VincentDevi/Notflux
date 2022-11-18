@@ -22,9 +22,11 @@ export const SearchList = ({onClick,url}) =>{
 }
 const ListeS =({onClick,data}) =>{
     return (
-        <ul className="absolute z-40 w-64 h-64 overflow-scroll bg-black">
+        <ul className="absolute z-50 w-32 max-h-96 overflow-scroll text-small font-list">
         {data.map((item,index) =>
-           <Link onClick={onClick} to={"/description/"+item.media_type+"/"+item.id} key={index}> <li className="bg-test rounded my-0.5 px-7 py-2">{ (item.media_type=="tv") ? item.name : item.title } </li> </Link>
+           <Link onClick={onClick} to={"/description/"+item.media_type+"/"+item.id} key={index}> 
+                <li className="bg-test my-0.5  py-1">{ (item.media_type=="tv") ? item.name : item.title } </li> 
+           </Link>
         )}
     </ul>
     );

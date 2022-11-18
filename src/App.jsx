@@ -9,7 +9,7 @@ import { NameSearch } from "./pages/NameSearch";
 import { ByGenre } from "./pages/ByGenre";
 const App = () =>{
     return(
-        <div className="overflow-hidden">
+        <div className="overflow-x-hidden">
             <Routes> 
                 <Route path="/" element={<HomePage/>}/>
                 

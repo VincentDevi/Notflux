@@ -14,7 +14,8 @@ export const MoviesPage = () =>{
     const allGenres = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     
     return (
-        <>
+        <>  
+            <Header/>
             <MobileNav/>
             <div className="h-contentMobile overflow-y-scroll overflow-x-hidden">
             { ( allGenres[0] ) ? <InputSelectGenre type={type}>{allGenres[0].genres}</InputSelectGenre> : <p>Loading</p>}

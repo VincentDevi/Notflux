@@ -24,8 +24,8 @@ export const Searchbar = () =>{
         }
     }
     return (
-        <div className="flex-col w-full mx-7 sm:w-96 mt-5 px-5">
-            <input ref={searchRef} onKeyDown={keyPressHandler} onChange={onChangeHandler} type="text" className="sm:py-5 border-2 mt-0.5 border-test h-6 w-64 px-7 pr-16 rounded-xl text-sm focus:outline-none bg-test" placeholder="Search" />
+        <div className="flex flex-col">
+            <input ref={searchRef} onKeyDown={keyPressHandler} onChange={onChangeHandler} type="text" className="h-1 w-32 focus:outline-none bg-test font-list" placeholder="Search" />
             { ( searchRef.current.value=="" && query=="") ? <span></span> : <SearchList onClick={clickHandler} url={url} />}
         </div>
     );

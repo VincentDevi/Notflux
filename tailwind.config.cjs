@@ -17,6 +17,7 @@ module.exports = {
       fontFamily:{
         'halloween' : ['Creepster', 'cursive'],
         'netflix' : ['Bebas Neue', 'cursive'],
+        'list' : ['Noto Sans', 'sans-serif']
       },
 
       colors:{

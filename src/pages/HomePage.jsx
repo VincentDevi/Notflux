@@ -13,14 +13,15 @@ export const HomePage = () =>{
   
     return (
         <>
+            <Header/>
             <MobileNav/>
             <div className="w-screen h-auto flex flex-col items-center">
-                <h2 className="w-11/12 text-white text-enormous">
+                <h2 className="w-11/12 mb-2 text-white text-enormous">
                     <Link to="/list/movie" >Movies </Link>
                 </h2>
                 <Carrousel type={"movie"}>{movieTrendingUrl}</Carrousel>
         
-                <h2 className="w-11/12 text-white text-enormous"> 
+                <h2 className="w-11/12 mb-2 text-white text-enormous"> 
                     <Link to="/list/tv">Tv Series</Link> 
                 </h2>
                 <Carrousel type={"tv"}>{tvTrendingUrl}</Carrousel>
