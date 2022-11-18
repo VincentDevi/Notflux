@@ -6,6 +6,7 @@ import { MovieInformation } from "../components/Description/MovieInformation/Mov
 import { TvDescription } from "../components/Description/TvDescription";
 import { TvInformation } from "../components/Description/TvInformation.jsx/TvInformation";
 import { Header } from "../components/Header/Header";
+import { MobileNav } from "../components/MobileNav/MobileNav";
 import { SimilarMovies } from "../components/Similar/SimilarMovies";
 import { TrailerVideo } from "../components/TrailerVideo/TrailerVideo";
 import { useFetch } from "../hooks/useFetch";
@@ -19,8 +20,9 @@ export const SinglePage = () =>{
                
     return (
         <div>
+            <MobileNav/>
             <div className="sm:h-screen">
-            <Header/>
+            
             <div className="sm:mx-24">
 
             <div className="sm:flex sm:shrink-0 sm:w-full sm:flex-wrap sm:justify-center">

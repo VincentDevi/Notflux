@@ -29,9 +29,9 @@ const MoviePoster = ({type,children}) =>{
         <>
             <Swiper
                 modules={[Navigation, Pagination]}
-                spaceBetween={10}
-                slidesPerGroup={3}
-                slidesPerView={3}
+                spaceBetween={5}
+                slidesPerGroup={2}
+                slidesPerView={2}
                 loop={true}
                 navigation
                 pagination={{ clickable: true }}

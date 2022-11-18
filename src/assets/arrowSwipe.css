@@ -12,9 +12,18 @@
 }
 
 .swiper-button-next { 
-    
+    top: 45%;
+    right: -1px;
     color: white 
 }
+.swiper-button-next::after{
+    font-size: 2rem;
+}
 .swiper-button-prev { 
+    top: 45%;
+    left: -1px;
     color: white 
+}
+.swiper-button-prev::after{
+    font-size: 2rem;
 }

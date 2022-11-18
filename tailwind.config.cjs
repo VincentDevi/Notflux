@@ -6,6 +6,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+      borderWidth:{
+        mobileBorderTop : "4px",
+        mobileNavBorder: "3px"
+      },
+      height:{
+        'navMobile': '10vh',
+        'contentMobile': '90vh'
+      },
       fontFamily:{
         'halloween' : ['Creepster', 'cursive'],
         'netflix' : ['Bebas Neue', 'cursive'],
@@ -21,8 +29,8 @@ module.exports = {
         'test' : '#3C4048'
       },
       fontSize:{
-        'gigantous' : '5rem',
-        'enormous' : '3rem',
+        'gigantous' : '3.5rem',
+        'enormous' : '1.5rem',
         'xtra' : "2rem",
         'large' : "1.75rem",
         'medium' : "1.2rem",

@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { Carrousel } from "../components/Carousel/Carrousel";
 import { Header } from "../components/Header/Header";
 import { InputSelectGenre } from "../components/InputSelect/InputSelectGenre";
+import { MobileNav } from "../components/MobileNav/MobileNav";
 import { useFetch } from "../hooks/useFetch";
 import { getUrlByGenre } from "../util/getListOfGenre";
 
@@ -13,12 +14,13 @@ export const MoviesPage = () =>{
     const allGenres = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     
     return (
-        <div>
-            <Header/>
+        <>
+            <MobileNav/>
+            <div className="h-contentMobile overflow-y-scroll overflow-x-hidden">
             { ( allGenres[0] ) ? <InputSelectGenre type={type}>{allGenres[0].genres}</InputSelectGenre> : <p>Loading</p>}
             { ( allGenres[0] ) ? <GenresCarrousel type={type}>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
-            
-        </div>
+            </div>
+        </>
     );
 }
 
