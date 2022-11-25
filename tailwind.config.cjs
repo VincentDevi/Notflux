@@ -12,12 +12,26 @@ module.exports = {
       },
       height:{
         'navMobile': '10vh',
-        'contentMobile': '77vh'
+        'contentMobile': '90vh',
+        'screenMax': '100vh',
+        'max': '100%',
+        'demi' : '50%',
+        'desc' : '35%',
+        'genre' : '15%',
+        'genreMin' : '150px',
+        'vid': '384px',
+        'descMov' : '150px'
       },
       fontFamily:{
         'halloween' : ['Creepster', 'cursive'],
         'netflix' : ['Bebas Neue', 'cursive'],
-        'list' : ['Noto Sans', 'sans-serif']
+        'list' : ['Heebo', 'sans-serif']
+      },
+      fontWeight:{
+        'light' : '200',
+        'regular': '400',
+        'semiBold' : '600',
+        'bold': '900'
       },
 
       colors:{
@@ -30,10 +44,11 @@ module.exports = {
         'test' : '#3C4048'
       },
       fontSize:{
-        'gigantous' : '3.5rem',
+        'huge': '2.5rem',
+        'gigantous' : '2.2rem',
         'enormous' : '1.5rem',
         'xtra' : "1.5rem",
-        'large' : "1.75rem",
+        'large' : "2rem",
         'medium' : "1rem",
         'small' : "0.75rem",
       },
