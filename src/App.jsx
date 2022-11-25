@@ -11,6 +11,7 @@ import { useWindowWidth} from "./hooks/useWindowWidth";
 import { DesktopNav } from "./components/DesktopNav/DesktopNav";
 import { MobileNav } from "./components/MobileNav/MobileNav";
 import { Header } from "./components/Header/Header";
+import { Search } from "./pages/Search";
 
 
 
@@ -18,7 +19,7 @@ const App = () =>{
     const {dynamicHeight,dynamicWidth} = useWindowWidth();
 
     return(
-        <>  
+        <> 
             {(dynamicWidth<1280)? <MobileNav/> : <DesktopNav/>}
             <Header/>
 
@@ -28,6 +29,7 @@ const App = () =>{
                 <Route path="/:type" element={<MoviesPage/>}/>
                 <Route path=":type/:id" element={<SinglePage/>}/>
                 <Route path=":type/:id/:genre" element={<ByGenre/>} />
+                <Route path="/search" element={<Search/>}/>
                 <Route path="/search/:query" element={<NameSearch/>} />
                 <Route path="*" element={<NoMatch />} />
 

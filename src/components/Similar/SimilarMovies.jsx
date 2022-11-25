@@ -8,8 +8,7 @@ export const SimilarMovies = ({type,movieId}) =>{
     return (
         <div className="w-screen flex flex-col items-center">
             <div className="w-11/12 flex flex-col items-center">
-                <h4 className="text-large self-start" >Similar { (type ==="movie") ? <span>Movies</span> : <span>Tv Series</span> }</h4>
-                <Carrousel type={type}>{url}</Carrousel>
+                <Carrousel name={(type==="movie")? "Similar movies": "Similar Tv Series"} type={type}>{url}</Carrousel>
             </div>
         </div>
     );

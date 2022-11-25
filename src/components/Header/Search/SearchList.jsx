@@ -16,7 +16,7 @@ export const SearchList = ({onClick,url}) =>{
 
     return (
         <div>
-           { ( test) ? <ListeS onClick={onClick} data={arr}/> : <span></span> }
+           { ( test) ? <ListeS onClick={onClick} data={arr}/> : null }
         </div>
     );
 }

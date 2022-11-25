@@ -8,8 +8,7 @@ export const MobileSearch = () =>{
 
     
     return (
-        <div className="flex">
-            {(buttonOn)? <Searchbar/> :null}
+        <div className="flex w-4/5 justify-end items-center">
             <div className="w-5 sm:w-6 cursor-pointer">
                 <img onClick={() => setButtonOn(!buttonOn)} className="w-full h-auto" src="../../public/search.png" alt="search" />
             </div>

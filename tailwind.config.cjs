@@ -6,11 +6,8 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-      borderWidth:{
-        mobileBorderTop : "4px",
-        mobileNavBorder: "3px"
-      },
       height:{
+        '[7vh]': '7vh',
         'navMobile': '10vh',
         'contentMobile': '90vh',
         'screenMax': '100vh',
