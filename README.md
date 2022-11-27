@@ -39,7 +39,6 @@
 
 
 ![HomePage](public/homePage.png) 
-![SinglePage](public/singlePage.png)
 ![HomeMobile](public/homePage-mobile.png) 
 
 
