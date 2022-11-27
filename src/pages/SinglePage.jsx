@@ -3,7 +3,6 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { MovieInformation } from "../components/Description/MovieInformation/MovieInformation";
 import { TvInformation } from "../components/Description/TvInformation.jsx/TvInformation";
-import { Header } from "../components/Header/Header";
 import { SimilarMovies } from "../components/Similar/SimilarMovies";
 import { TrailerVideo } from "../components/TrailerVideo/TrailerVideo";
 import { useFetch } from "../hooks/useFetch";

@@ -9,12 +9,12 @@ export const HomePage = () =>{
   
     return (
         <>
-            <div className="h-contentMobile">   
-                <div className="relative top-20 xl:relative w-screen h-max flex flex-col items-center">
+             
+                <div className="w-screen pt-[10vh] h-contentMobile xl:h-max flex flex-col items-center">
                     <Carrousel url={"/movie"} name={"movie"} type={"movie"}>{movieTrendingUrl}</Carrousel>
                     <Carrousel url={"/tv"} name={"tv"} type={"tv"}>{tvTrendingUrl}</Carrousel>
                 </div>
-            </div>
+            
         </>
     );
 }

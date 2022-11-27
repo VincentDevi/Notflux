@@ -15,11 +15,11 @@ export const NameSearch = () =>{
         arr = data.results.filter(item => item.media_type != "person");
     }
     return (
-        <>
-        <h4 className=" mx-5 text-medium sm:text-xtra sm:pl-36 sm:mb-10">Your Search for: <span className="text-large sm:text-enormous"> " {query} " </span></h4>
-        <div className="pb-16">
-        { ( arr && arr !=0 ) ? <SearchResult data={arr}/> : <NoResult/> }
+        <div className="pt-[10vh]">
+            <h4 className=" mx-5 text-medium sm:text-xtra sm:pl-36 sm:mb-10">Your Search for: <span className="text-large sm:text-enormous"> " {query} " </span></h4>
+            <div className="pb-16">
+            { ( arr && arr !=0 ) ? <SearchResult data={arr}/> : <NoResult/> }
+            </div>
         </div>
-        </>
     );
 }

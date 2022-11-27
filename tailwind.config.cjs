@@ -6,6 +6,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+      padding:{
+        '[10vh]':'10vh',
+      },
       height:{
         '[7vh]': '7vh',
         'navMobile': '10vh',
