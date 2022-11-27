@@ -1,33 +1,40 @@
 import React from "react";
-import "./assets/index.css";
 import { Routes,Route } from "react-router-dom";
-import { Halloween } from "./pages/Halloween";
+import './index.css';
 import { HomePage } from "./pages/HomePage";
 import { MoviesPage } from "./pages/MoviesPage";
 import { NoMatch } from "./pages/NoMatch";
 import { SinglePage } from "./pages/SinglePage";
 import { NameSearch } from "./pages/NameSearch";
 import { ByGenre } from "./pages/ByGenre";
+import { useWindowWidth} from "./hooks/useWindowWidth";
+import { DesktopNav } from "./components/DesktopNav/DesktopNav";
+import { MobileNav } from "./components/MobileNav/MobileNav";
+import { Header } from "./components/Header/Header";
+import { Search } from "./pages/Search";
+
+
+
 const App = () =>{
+    const {dynamicHeight,dynamicWidth} = useWindowWidth();
+
     return(
-        <div>
+        <> 
+            {(dynamicWidth<1280)? <MobileNav/> : <DesktopNav/>}
+            <Header/>
+
             <Routes> 
                 <Route path="/" element={<HomePage/>}/>
                 
-                <Route path="/list/:type" element={<MoviesPage/>}/>
-                                
-                <Route path="/halloween" element={<Halloween/>}/>
-
-                <Route path="/description/:type/:id" element={<SinglePage/>}/>
-
+                <Route path="/:type" element={<MoviesPage/>}/>
+                <Route path=":type/:id" element={<SinglePage/>}/>
+                <Route path=":type/:id/:genre" element={<ByGenre/>} />
+                <Route path="/search" element={<Search/>}/>
                 <Route path="/search/:query" element={<NameSearch/>} />
-                
-                <Route path="/bygenre/:type/:genre/:id" element={<ByGenre/>} />
-
                 <Route path="*" element={<NoMatch />} />
 
             </Routes>
-        </div>
+        </>
     );
 }
 export default App

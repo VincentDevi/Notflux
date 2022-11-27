@@ -1,27 +1,42 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { getDuration } from "../../../util/getDuration";
+
 export const MovieInformation = ({children}) =>{
     return (
-        <div className="sm:w-full sm:h-96 sm:order-3 sm:flex">
-        <div className="my-7 flex justify-between sm:justify-start sm:w-5/12 sm:ml-20">
-                   
-            <div className="self-center">
-                <h4 className="text-medium px-5">Duration: <span className="text-large">{getDuration(children.runtime)}</span></h4>
-                <p className="text-medium px-5">Note: <span className="text-large">{Math.round(children.vote_average)}</span> /10</p>
+        <div className="w-11/12 h-max mb-10 xl:h-screen">  
+            {/* <div className="h-auto w-full  ">
+                <img src={getPosterUrl(children.poster_path)} alt={children.title} className="w-full" />
+            </div> */}
+            <div className="xl:flex">
+                <ul className="h-genreMin overflow-hidden w-full xl:w-1/2 flex justify-around items-center flex-wrap font-bold">
+                    {children.genres.map((item,index) =>
+                    <li key={index} className="px-3">
+                        {(item.name=="Science Fiction")? "Sci-fi":item.name}
+                    </li>
+                    )}
+                </ul>  
+
+                <div className="h-descMov min-h-fit w-full xl:w-1/2 flex justify-center flex-wrap">
+                    <div className="w-1/2 flex flex-col items-center">
+                        <h4 className="">Duration:</h4>
+                        <p className="font-bold">{getDuration(children.runtime)}</p>
+                    </div>
+                    <div className="w-1/2 flex flex-col items-center">
+                        <h4 className="">Note:</h4> 
+                        <p className="font-bold">{Math.round(children.vote_average)} <span className="font-light">/10</span></p> 
+                    </div>
+                    <div className="w-1/2 flex flex-col items-center">
+                        <h4 className="">Realease date:</h4>
+                        <p className="font-bold">{children.release_date}</p>
+                    </div>
+                </div>
             </div>
-            <div className="sm:self-center sm:pl-20">
-                <h4 className="text-medium text-right pr-7 pt-2">Realease date:</h4>
-                <p className="text-large text-right pr-7">{children.release_date}</p>
+            
+            <div className="min-h-fit">
+                <h4 className="">Synopsis</h4>
+                <p className="font-light text-justify">{children.overview}</p>
             </div>
         </div>
-
-
-        <div className="sm:w-1/2 sm:self-center">
-            <h4 className="text-large px-8">Synopsis</h4>
-            <p className="text-medium text-justify px-5 mb-10">{children.overview}</p>
-        </div>
-    
-    </div>
     );
 }
