@@ -8,6 +8,7 @@ module.exports = {
   theme: {
       padding:{
         '[10vh]':'10vh',
+        '[0vh]':'0vh',
       },
       margin:{
         '[10vh]':'10vh',
