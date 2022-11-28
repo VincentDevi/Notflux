@@ -12,7 +12,7 @@ export const MobileSearch = () =>{
             {(buttonOn)? <Searchbar/>:null}
             <div>
                 <div className="w-5 sm:w-6 cursor-pointer">
-                    <img onClick={() => setButtonOn(!buttonOn)} className="w-full h-auto" src="public/search.png" alt="search" />
+                    <img onClick={() => setButtonOn(!buttonOn)} className="w-full h-auto" src="search.png" alt="search" />
                 </div>
             </div>
         </div> 
