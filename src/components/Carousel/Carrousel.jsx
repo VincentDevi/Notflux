@@ -20,7 +20,7 @@ export const Carrousel = ({url, name,  type, children}) =>{
             <h2 className="w-10/12 text-white text-enormous sm:text-gigantous mb-5">
                 <Link className="flex items-center" to={url} >{name}
                     <div className="ml-2 w-3 sm:w-5">
-                        <img className="w-full h-auto" src="../public/more.png" alt="show more" />
+                        <img className="w-full h-auto" src="public/more.png" alt="show more" />
                     </div>
                 </Link>
             </h2>

@@ -14,14 +14,14 @@ export const Header = () =>{
     console.log(type)
     const allGenres = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     return (
-        <div className="absolute z-50 top-0 left-0 w-screen bg-black h-navMobile flex justify-center items-center">
+        <div className="absolute z-50 top-0 left-0 w-11/12 bg-black h-navMobile flex justify-center items-center">
             <div className="w-11/12 flex">
                 <Link className="w-2/12 text-medium sm:text-large lg:text-huge text-red" to="/">Notflux</Link>
                 {(dynamicWidth>1280)?<DesktopNav/>:null}
                 <div className="w-10/12 flex justify-end">
                     <MobileSearch/>
-                    {(allGenres[0])?<GenreButton onClick={()=> setGenre(!genre)}/>:null}
-                    {(genre)? <InputSelectGenre/>:null}
+                    {/* {(allGenres[0])?<GenreButton onClick={()=> setGenre(!genre)}/>:null}
+                    {(genre)? <InputSelectGenre/>:null} */}
                 </div>
             </div>
         </div>
