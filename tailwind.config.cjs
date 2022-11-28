@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
       padding:{
-        '[5vh]':'5vh',
+        '[10vh]':'10vh',
       },
       margin:{
         '[10vh]':'10vh',
