@@ -10,7 +10,7 @@ export const HomePage = () =>{
     return (
         <>
              
-                <div className="w-screen mt-[10vh] h-contentMobile xl:h-max flex flex-col items-center">
+                <div className="w-screen mt-[10vh] pb-[5vh] h-contentMobile xl:h-max flex flex-col items-center">
                     <Carrousel url={"/movie"} name={"movie"} type={"movie"}>{movieTrendingUrl}</Carrousel>
                     <Carrousel url={"/tv"} name={"tv"} type={"tv"}>{tvTrendingUrl}</Carrousel>
                 </div>

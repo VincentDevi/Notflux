@@ -6,6 +6,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+      padding:{
+        '[5vh]':'5vh',
+      },
       margin:{
         '[10vh]':'10vh',
       },
