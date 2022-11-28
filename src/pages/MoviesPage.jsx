@@ -13,7 +13,7 @@ export const MoviesPage = () =>{
         
         <div className="w-screen"> 
             {/* { ( allGenres[0] ) ? <SelectGenre type={type}>{allGenres[0].genres}</SelectGenre> : <p>Loading</p>} */}
-            <div className="h-contentMobile pt-[10vh] xl:h-max relative">
+            <div className="h-contentMobile mt-[10vh] xl:h-max relative">
                 <div className="h-auto overflow-x-hidden">
                 { ( allGenres[0] ) ? <GenresCarrousel type={type}>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
                 </div>

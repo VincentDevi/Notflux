@@ -15,7 +15,7 @@ export const NameSearch = () =>{
         arr = data.results.filter(item => item.media_type != "person");
     }
     return (
-        <div className="pt-[10vh]">
+        <div className="h-contentMobile xl:h-auto mt-[10vh]">
             <h4 className=" mx-5 text-medium sm:text-xtra sm:pl-36 sm:mb-10">Your Search for: <span className="text-large sm:text-enormous"> " {query} " </span></h4>
             <div className="pb-16">
             { ( arr && arr !=0 ) ? <SearchResult data={arr}/> : <NoResult/> }

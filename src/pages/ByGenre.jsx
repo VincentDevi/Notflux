@@ -12,7 +12,7 @@ export const ByGenre = () =>{
     const url = "https://api.themoviedb.org/3/discover/"+type+"?api_key=1f23cb937d155a995019ffd894a97ddd&with_genres="+id;
     const [data, loading, error] =useFetch(url);
     return (
-        <div className="pt-[10vh]">
+        <div className="h-contentMobile xl:h-auto mt-[10vh]">
             <h4 className="mx-5 text-medium sm:text-large sm:pl-36 sm:mb-10">Search for: 
                 <span className="text-large sm:text-enormous"> " {genre} " </span>
             </h4>

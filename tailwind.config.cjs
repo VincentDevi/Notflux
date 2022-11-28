@@ -6,13 +6,13 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-      padding:{
+      margin:{
         '[10vh]':'10vh',
       },
       height:{
         '[7vh]': '7vh',
         'navMobile': '10vh',
-        'contentMobile': '90vh',
+        'contentMobile': '80vh',
         'screenMax': '100vh',
         'max': '100%',
         'demi' : '50%',
