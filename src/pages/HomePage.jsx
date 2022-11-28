@@ -8,14 +8,14 @@ export const HomePage = () =>{
     const tvTrendingUrl = "https://api.themoviedb.org/3/trending/tv/day?api_key=1f23cb937d155a995019ffd894a97ddd";
   
     return (
-        <div className="overflow-hidden">
+        <>
              
                 <div className="w-screen mt-[10vh] h-contentMobile xl:h-max flex flex-col items-center">
                     <Carrousel url={"/movie"} name={"movie"} type={"movie"}>{movieTrendingUrl}</Carrousel>
                     <Carrousel url={"/tv"} name={"tv"} type={"tv"}>{tvTrendingUrl}</Carrousel>
                 </div>
             
-        </div>
+        </>
     );
 }
 
