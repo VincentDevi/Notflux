@@ -11,9 +11,9 @@ export const MoviesPage = () =>{
     const allGenres = useFetch("https://api.themoviedb.org/3/genre/"+type+"/list?api_key=1f23cb937d155a995019ffd894a97ddd");
     return (
         
-        <div className="w-screen"> 
+        <div className="w-screen overflow-hidden"> 
             {/* { ( allGenres[0] ) ? <SelectGenre type={type}>{allGenres[0].genres}</SelectGenre> : <p>Loading</p>} */}
-            <div className="h-contentMobile mt-[10vh] xl:h-max relative">
+            <div className="h-contentMobile mt-[10vh] xl:h-max relative overflow-y-scroll">
                 <div className="h-auto overflow-x-hidden">
                 { ( allGenres[0] ) ? <GenresCarrousel type={type}>{allGenres[0].genres}</GenresCarrousel> : <p>Loading</p>}
                 </div>
